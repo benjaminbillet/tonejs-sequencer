@@ -1,10 +1,13 @@
 .container {
-  width: 200px;
-  margin-left: 25px;
+  width: 100%;
 }
 
 .mark {
   color: var(--text-color-darker);
   width: 100px;
   display: block;
+}
+
+.slider {
+  width: 100%;
 }

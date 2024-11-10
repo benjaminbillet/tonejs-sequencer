@@ -12,20 +12,16 @@ export function BpmPicker() {
   const [bpm] = useAtom(sequencerState.bpm);
 
   return (
-    <FlexCell orientation="horizontal">
+    <FlexCell orientation="horizontal" className={styles.container} alignItems="center">
       <Legend>BPM</Legend>
       <Slider
-        min={50}
-        max={400}
+        min={45}
+        max={145}
         step={5}
         orientation="horizontal"
         value={bpm}
         onChange={value => sequencerActions.setBpm(value)}
-        sliderClassName={styles.container}
-        marks={{
-          45: <span className={styles.mark}>45 bpm</span>,
-          145: <span className={styles.mark}>145 bpm</span>,
-        }}
+        sliderClassName={styles.slider}
       />
     </FlexCell>
   );

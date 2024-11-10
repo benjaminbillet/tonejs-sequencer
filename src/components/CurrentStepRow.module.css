@@ -1,0 +1,32 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.step {
+  box-sizing: border-box;
+  width: 40px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  border-radius: 4px;
+  transition: background-color 0.25s ease;
+  color: var(--text-color);
+}
+
+.disabledStep {
+  color: var(--background-color) !important;
+}
+
+.activeStep {
+  line-height: 23px;
+  border: 1px solid var(--background-color-lighter) !important;
+  color: var(--text-color-lighter) !important;
+}
+
+.label {
+  width: 75px;
+}

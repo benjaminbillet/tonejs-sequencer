@@ -1,0 +1,35 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.step {
+  width: 40px;
+  height: 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+.stepDisabled {
+  background-color: var(--background-color);
+}
+
+.stepActivated {
+  background-color: var(--secondary-color);
+}
+
+.stepActivated:hover {
+  background-color: var(--secondary-color-darker);
+}
+
+.stepInactivated {
+  background-color: var(--background-color-lighter);
+}
+
+.label {
+  width: 75px;
+}
