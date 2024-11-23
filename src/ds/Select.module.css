@@ -1,0 +1,28 @@
+.root {
+  background-color: var(--background-color) !important;
+  border-radius: 5px !important;
+}
+
+.root div[class~='ant-select-selector'] {
+  background-color: var(--background-color) !important;
+  color: var(--text-color) !important;
+  border: 2px solid transparent !important;
+}
+
+.root[class~='ant-select-open'] div[class~='ant-select-selector'] {
+  border: 2px solid var(--secondary-color) !important;
+}
+
+.root span[class~='ant-select-arrow'] {
+  color: var(--text-color) !important;
+}
+
+.popup div[class~='ant-select-item'] {
+  background-color: var(--background-color) !important;
+  color: var(--text-color) !important;
+}
+
+.popup div[class~='ant-select-item-option-active'] {
+  background-color: var(--secondary-color) !important;
+  color: var(--text-color) !important;
+}
