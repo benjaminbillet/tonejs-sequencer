@@ -1,7 +1,7 @@
 import React from 'react';
 import { useAtom } from 'jotai';
 
-import * as sequencerActions from '../domains/sequencer/sequencer.service';
+import { sequencerService } from '../domains/sequencer/sequencer.service';
 import * as sequencerState from '../domains/sequencer/sequencer.state';
 import { FlexCell } from '../ds/FlexCell';
 import { Legend } from '../ds/Legend';
@@ -20,7 +20,7 @@ export function BpmPicker() {
         step={5}
         orientation="horizontal"
         value={bpm}
-        onChange={value => sequencerActions.setBpm(value)}
+        onChange={value => sequencerService.setBpm(value)}
         sliderClassName={styles.slider}
       />
     </FlexCell>

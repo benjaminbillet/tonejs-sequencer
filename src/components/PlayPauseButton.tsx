@@ -1,7 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
 
-import * as sequencerActions from '../domains/sequencer/sequencer.service';
+import { sequencerService } from '../domains/sequencer/sequencer.service';
 import { Button } from '../ds/Button';
 import styles from './PlayPauseButton.module.css';
 
@@ -10,9 +10,9 @@ export function PlayPauseButton() {
 
   const onClick = React.useCallback(() => {
     if (playing) {
-      sequencerActions.pause();
+      sequencerService.pause();
     } else {
-      sequencerActions.play();
+      sequencerService.play();
     }
     setPlaying(!playing);
   }, [playing]);

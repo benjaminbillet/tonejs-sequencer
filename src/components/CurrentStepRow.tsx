@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import { useAtom } from 'jotai';
 
 import { MAX_STEPS } from '../domains/sequencer/sequencer.constant';
-import * as sequencerService from '../domains/sequencer/sequencer.service';
+import { sequencerService } from '../domains/sequencer/sequencer.service';
 import * as sequencerState from '../domains/sequencer/sequencer.state';
 import styles from './CurrentStepRow.module.css';
 
