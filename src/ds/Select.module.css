@@ -9,12 +9,20 @@
   border: 2px solid transparent !important;
 }
 
+.root[class~='ant-select-disabled'] div[class~='ant-select-selector'] {
+  color: #000 !important;
+}
+
 .root[class~='ant-select-open'] div[class~='ant-select-selector'] {
   border: 2px solid var(--secondary-color) !important;
 }
 
 .root span[class~='ant-select-arrow'] {
   color: var(--text-color) !important;
+}
+
+.popup {
+  height: 200px !important;
 }
 
 .popup div[class~='ant-select-item'] {

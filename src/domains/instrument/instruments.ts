@@ -5,7 +5,7 @@ const polySynthFilter = new Tone.AutoFilter({
   type: 'sine',
   depth: 1,
   baseFrequency: 300,
-  octaves: 2.6,
+  octaves: 3,
   filter: {
     type: 'lowpass',
     rolloff: -24,
@@ -20,9 +20,9 @@ const polySynthPanner = new Tone.PanVol({
 }).toDestination();
 
 const polySynthDelay = new Tone.PingPongDelay({
-  delayTime: '12n',
+  delayTime: '48n',
   maxDelay: 2,
-  wet: 0.4,
+  wet: 0.6,
   feedback: 0.3,
 }).toDestination();
 
@@ -30,7 +30,7 @@ export const instruments = [
   {
     name: 'PolySynth',
     synth: new Tone.PolySynth({
-      maxPolyphony: 7,
+      maxPolyphony: 16,
       voice: Tone.Synth,
     }).toDestination(),
     volume: 0.5,
@@ -38,7 +38,7 @@ export const instruments = [
   {
     name: 'Harmonics',
     synth: new Tone.AMSynth({
-      harmonicity: 3.999,
+      harmonicity: 4,
       oscillator: {
         type: 'square',
       },
@@ -451,7 +451,7 @@ export const instruments = [
   {
     name: 'Picked 1',
     synth: new Tone.PolySynth({
-      maxPolyphony: 7,
+      maxPolyphony: 16,
       voice: Tone.Synth,
       options: {
         oscillator: {
@@ -475,7 +475,7 @@ export const instruments = [
   {
     name: 'Picked 2',
     synth: new Tone.PolySynth({
-      maxPolyphony: 7,
+      maxPolyphony: 16,
       voice: Tone.Synth,
       options: {
         oscillator: {
@@ -500,7 +500,7 @@ export const instruments = [
   {
     name: 'Saw Toothbrush',
     synth: new Tone.PolySynth({
-      maxPolyphony: 7,
+      maxPolyphony: 16,
       voice: Tone.Synth,
       options: {
         oscillator: {
@@ -590,19 +590,19 @@ export const instruments = [
         octaves: 5,
       },
     }).toDestination(),
-    volume: 0.7,
+    volume: 0.5,
   },
   {
     name: 'HDR',
     synth: new Tone.PolySynth({
-      maxPolyphony: 6,
+      maxPolyphony: 16,
       voice: Tone.Synth,
       options: {
         oscillator: {
           type: 'sawtooth',
         },
       },
-    }).chain(polySynthFilter, polySynthDelay, polySynthPanner, Tone.Master),
-    volume: 0.5,
+    }).chain(polySynthFilter, polySynthDelay, polySynthPanner, Tone.getDestination()),
+    volume: 0.3,
   },
 ] as const;

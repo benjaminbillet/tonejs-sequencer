@@ -9,17 +9,21 @@ export interface SelectProps {
   value: string;
   className?: string;
   options: { value: string; label: React.ReactNode }[];
+  disabled?: boolean;
+  noArrow?: boolean;
 }
 
-export function Select({ onChange, value, className, options }: SelectProps) {
+export function Select({ onChange, value, className, options, disabled, noArrow }: SelectProps) {
   return (
     <AntdSelect
       options={options}
       onChange={onChange}
       value={value}
-      className={className}
-      rootClassName={styles.root}
+      rootClassName={clsx(styles.root, className)}
       popupClassName={styles.popup}
+      disabled={disabled}
+      suffixIcon={noArrow ? null : undefined}
+      listHeight={190}
     />
   );
 }

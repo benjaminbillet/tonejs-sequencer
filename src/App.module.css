@@ -28,6 +28,11 @@
   animation: Gradient 10s ease infinite;
 }
 
+.sequencer {
+  width: 100%;
+  gap: 5px !important;
+}
+
 @keyframes Gradient {
   0% {
     background-position: 0% 50%;
